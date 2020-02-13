@@ -1,3 +1,16 @@
+/* tag */
 h1 {
   color: green;
+  font-size: 10px;
+}
+
+/* id */
+#name
+
+/* class */
+.name
+
+
+selector (id, class, tag name) {
+  property-name: value;
 }

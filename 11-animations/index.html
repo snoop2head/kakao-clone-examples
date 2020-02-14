@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Transformations</title>
-  <style>
-    .box{
-      width: 100px;
-      height: 100px;
-      background: red;
-      animation: 1.5s scaleAndRotateSquare infinite ease-in-out;
-    }
-    /*@keyframes scaleAndRotateSquare {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Transformations</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        /* animation effect for 1.5 second, infinite loop, ease-in and ease out */
+        animation: 1.5s scaleAndRotateSquare infinite ease-in-out;
+      }
+
+      /* Naming Animation as keyframes, when you have only two stages, use from adn to */
+      /*@keyframes scaleAndRotateSquare {
       from{
 
       }
@@ -20,22 +23,23 @@
 
       }
     }*/
-    @keyframes scaleAndRotateSquare {
-      0%{
-        transform:none;
+      /* Naming Animations as keyframes, having 3 steps */
+      @keyframes scaleAndRotateSquare {
+        0% {
+          transform: none;
+        }
+        50% {
+          transform: rotate(1turn) scale(0.5, 0.5);
+          color: white;
+        }
+        100% {
+          transform: none;
+          color: blue;
+        }
       }
-      50%{
-        transform: rotate(1turn) scale(.5, .5);
-        color:white;
-      }
-      100%{
-        transform: none;
-        color:blue;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="box">11</div>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="box">Text Inside</div>
+  </body>
 </html>

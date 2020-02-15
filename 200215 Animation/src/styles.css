@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.box1 {
+  background-color: #76c4c6;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.box1 .spin_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 1.5s rotateDotBox infinite ease;
+}
+
+.box1 .spin_box .dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 3px;
+  background-color: #feffff;
+  margin: 6px;
+}
+
+.box2 {
+  background-color: #4bad9c;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box2 .wave_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box2 .wave_box .square {
+  height: 30px;
+  width: 6px;
+  margin: 2px;
+  background-color: #feffff;
+  animation: 1.3s waveSquareBox infinite ease-in-out;
+}
+
+.box2 .wave_box .square:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.box2 .wave_box .square:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.box2 .wave_box .square:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.box2 .wave_box .square:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.box2 .wave_box .square:nth-child(5) {
+  animation-delay: 0.75s;
+}
+
+@keyframes rotateDotBox {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes waveSquareBox {
+  0% {
+    height: 30px;
+  }
+
+  30% {
+    height: 60px;
+  }
+
+  60% {
+    height: 30px;
+  }
+}
